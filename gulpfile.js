@@ -18,7 +18,7 @@ const paths = {
     dest: `${homeDir}/css`
   },
   html: {
-    src: `${homeDir}/*.html`
+    src: `${homeDir}/**/*.html`
   }
 };
 
@@ -48,8 +48,9 @@ function sass() {
 
 const style = gulp.series(styleLint, sass);
 
-function reload() {
+function reload(done) {
   server.reload();
+  done();
 }
 
 function watch() {
