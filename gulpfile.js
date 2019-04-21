@@ -14,7 +14,7 @@ const homeDir = './app';
 
 const paths = {
   styles: {
-    src: `${homeDir}/scss/style.scss`,
+    src: `${homeDir}/scss/**/*.scss`,
     dest: `${homeDir}/css`
   },
   html: {
