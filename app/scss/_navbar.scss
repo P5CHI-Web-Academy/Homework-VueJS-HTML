@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  grid-area: navbar;
+  align-items: center;
+
+  :last-child {
+    flex: 1;
+    text-align: right;
+  }
+
+  li {
+    margin: 0 1em;
+  }
+
+  a {
+    font-weight: 600;
+    color: $color-5-hex;
+    text-transform: uppercase;
+  }
+}

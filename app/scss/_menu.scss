@@ -1,0 +1,42 @@
+.menu {
+  display: flex;
+  grid-area: menu;
+  align-items: center;
+  margin: 0 -1em;
+  background-color: $color-4-hex;
+
+  &__title {
+    flex: 1;
+    margin: 0.5em 1em;
+    text-transform: uppercase;
+  }
+
+  &__items {
+    display: flex;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 0.5em 1em;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu {
+    flex-direction: column;
+    margin: 0;
+    background-color: transparent;
+
+    &__title {
+      margin: 1em 0;
+    }
+
+    &__items {
+      flex-direction: column;
+    }
+
+    &__item {
+      margin: 1em 0;
+    }
+  }
+}
