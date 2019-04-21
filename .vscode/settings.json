@@ -1,0 +1,5 @@
+{
+  "prettier.tslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "stylelint.enable": true
+}
