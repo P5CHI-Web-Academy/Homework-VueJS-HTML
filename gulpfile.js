@@ -64,6 +64,7 @@ function watch() {
 }
 
 const build = gulp.series(clean, style);
+const serve = gulp.series(build, watch);
 
-exports.default = watch;
 exports.build = build;
+exports.default = serve;
