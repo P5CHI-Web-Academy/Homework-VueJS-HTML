@@ -1,5 +1,7 @@
 .footer {
   grid-area: footer;
-  color: $color-3-hex;
+  padding: 0.25em;
+  color: $color-1-hex;
   text-align: center;
+  background-color: $color-4-hex;
 }

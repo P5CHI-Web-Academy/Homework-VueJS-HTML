@@ -2,13 +2,12 @@
   display: flex;
   grid-area: menu;
   align-items: center;
+  justify-content: center;
   margin: 0 -1em;
   background-color: $color-4-hex;
 
   &__title {
-    flex: 1;
-    margin: 0.5em 1em;
-    text-transform: uppercase;
+    display: none;
   }
 
   &__items {
@@ -18,6 +17,10 @@
 
   &__item {
     margin: 0.5em 1em;
+
+    a {
+      color: $color-1-hex;
+    }
   }
 }
 
@@ -25,10 +28,13 @@
   .menu {
     flex-direction: column;
     margin: 0;
-    background-color: transparent;
 
     &__title {
-      margin: 1em 0;
+      display: initial;
+      flex: 1;
+      margin: 0.5em 1em;
+      color: $color-1-hex;
+      text-transform: uppercase;
     }
 
     &__items {

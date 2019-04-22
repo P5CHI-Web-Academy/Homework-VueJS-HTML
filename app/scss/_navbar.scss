@@ -2,10 +2,11 @@
   display: flex;
   grid-area: navbar;
   align-items: center;
+  justify-content: flex-end;
+  background-color: $color-3-hex;
 
-  :last-child {
-    flex: 1;
-    text-align: right;
+  &__menu {
+    display: none;
   }
 
   li {
@@ -16,5 +17,23 @@
     font-weight: 600;
     color: $color-5-hex;
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: 426px) {
+  .navbar {
+    & &__hamburger-menu {
+      display: none;
+    }
+
+    &__menu {
+      display: flex;
+      flex: 1;
+
+      :last-child {
+        flex: 1;
+        text-align: right;
+      }
+    }
   }
 }
