@@ -18,7 +18,7 @@ body {
     'sidebar  content'
     'sidebar  content'
     'footer   footer';
-  grid-template-rows: 50px minmax(calc(50vh - (50px + 30px)), 100%) minmax(calc(50vh - (50px + 30px)), 100%) 50px;
+  grid-template-rows: 50px minmax(calc(50vh - 75px), 100%) minmax(calc(50vh - 75px), 100%) 50px;
   grid-template-columns: 150px minmax(min-content, 100%);
   grid-gap: 5px;
   min-height: calc(100vh - 30px);
