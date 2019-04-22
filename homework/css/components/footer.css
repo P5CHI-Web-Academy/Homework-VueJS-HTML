@@ -1,0 +1,34 @@
+footer {
+  grid-area: footer;
+  background-color:  rgba(67, 71, 67, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+footer .media-icons {
+  display: flex;
+  padding: 0 30px;
+}
+
+footer .media-icons div {
+  cursor: pointer;
+}
+
+footer .media-icons span {
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+@media (min-width: 992px) {
+  footer .media-icons span {
+    transition: transform 400ms ease-in-out;
+  }
+
+  footer .media-icons span:hover {
+    transform: scale(1.5);
+  }
+}
+

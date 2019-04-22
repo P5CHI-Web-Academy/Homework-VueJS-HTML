@@ -1,0 +1,175 @@
+header {
+  width: 100%;
+  background-color: rgba(67, 71, 67, 0.7);
+  grid-area: header;
+  display: grid;
+  position: relative;
+}
+
+.active {
+  background-color: #f9cb12;
+}
+
+header .logo {
+  grid-area: logo;
+} 
+
+header .logo .logo-image {
+  min-width: 90px;
+  height: 100%;
+  background-image: url("../../images/flight.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+header nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  cursor: pointer;
+  height: 100%;
+}
+
+ header nav ul li span {
+ display: inline-block;
+ line-height: 100px;
+ height: 100%;
+ padding: 0 20px;
+ transition: background-color 300ms ease-in-out;
+}
+
+
+@media (max-width: 575px) {
+  header {
+    grid-template-rows: 100px 50px;
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+      'logo'
+      'nav';
+  }
+
+  header .logo .slogan {
+    display: none;
+  }
+
+  header nav ul li span {
+    display: inline-block;
+    line-height: 50px;
+    height: 100%;
+    padding: 0 20px;
+  }
+
+  header .headerLogIn {
+    display: none;
+  }
+
+  .active {
+    background-color: #f9cb12;
+  }
+}
+
+@media (min-width: 576px) {
+  header {
+    grid-template-rows: 100px;
+    grid-template-columns: 1fr auto 1fr; 
+    grid-template-areas: 
+      'logo nav login';
+  }
+
+  header .logo .slogan {
+    display: none;
+  }
+
+  header .headerLogIn {
+    grid-area: login;
+    line-height: 100px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+
+  header .headerLogIn span {
+    border: 3px solid #f9cb12;
+    border-radius: 30px;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: 
+      border-color 200ms ease-in-out, 
+      border-radius 200ms ease-in-out, 
+      color 200ms ease-in-out;
+  }
+}
+
+@media (min-width: 992px) {
+  header {
+    grid-template-rows: 100px;
+    grid-template-columns: 400px auto 200px; 
+    grid-template-areas: 
+      "logo nav login";
+  }
+
+  header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header .logo {
+    margin-left: 40px;
+  }
+
+  header .logo .slogan {
+    display: block;
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 1px solid #acafac;
+  }
+
+  header nav ul {
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 10px;
+  }
+
+  header nav ul li span {
+    transition: background-color 300ms ease-in-out;
+  }
+
+  header nav ul li span:hover {
+    background-color: #f9cb12;
+    animation: navItems 500ms ease-in-out;
+  }
+
+  @keyframes navItems {
+    0% {
+      margin-top: 0px;
+    }
+
+    50% {
+      margin-top: -15px;
+      line-height: 130px;
+    }
+
+    100% {
+      margin-top: 0px;
+      line-height: 100px;
+    }
+  }
+
+  header .headerLogIn span:hover {
+    border-color: white;
+    border-radius: 10px;
+    color: #f9cb12;
+  }
+}
