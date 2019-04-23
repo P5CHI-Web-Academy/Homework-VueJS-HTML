@@ -105,20 +105,18 @@ body {
 
   &__menu {
     margin: 10px 0 0;
-    color: #ffeead;
     text-decoration: none;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 0;
     margin: 0;
   }
 
   &__item {
-    padding: 10px 0;
+    margin: 10px 0;
     list-style: none;
   }
 
