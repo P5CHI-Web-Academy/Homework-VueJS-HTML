@@ -74,7 +74,6 @@ body {
   &__list {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     padding: 0;
     margin: 0;
   }
@@ -84,7 +83,7 @@ body {
   }
 
   &__link {
-    padding: 0 10px;
+    margin: 0 10px;
     color: #ffeead;
     text-decoration: none;
 
@@ -99,7 +98,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 0;
   text-align: center;
 
@@ -112,7 +110,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0;
-    margin: 0;
+    margin: auto 0 0;
   }
 
   &__item {
