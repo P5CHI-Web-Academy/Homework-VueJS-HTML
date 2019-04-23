@@ -182,7 +182,6 @@ body {
   }
 
   .content {
-    display: grid;
     grid-template-areas:
       'one'
       'two'
@@ -196,7 +195,6 @@ body {
 
 @media (max-width: 580px) {
   .containter {
-    display: grid;
     grid-template-areas:
       'logo'
       'header'
