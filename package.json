@@ -1,0 +1,68 @@
+{
+  "name": "grid",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.prod.js  --colors",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "lint:html": "./node_modules/htmlhint/bin/htmlhint -c .htmlhintrc.json $npm_package_config_files_html",
+    "prettyhtml:fix": "./node_modules/.bin/prettyhtml --sortAttributes $npm_package_config_files_html",
+    "prettier:check": "./node_modules/.bin/prettier --config ./.prettierrc.json --list-different $npm_package_config_files",
+    "prettier:fix": "./node_modules/.bin/prettier --config ./.prettierrc.json --write $npm_package_config_files",
+    "stylelint:check": "./node_modules/.bin/stylelint --config ./.stylelintrc.json $npm_package_config_files_scss",
+    "stylelint:fix": "./node_modules/.bin/stylelint --config ./.stylelintrc.json --fix $npm_package_config_files_scss",
+    "all:check": "./node_modules/.bin/run-s stylelint:check lint:html",
+    "all:fix": "./node_modules/.bin/run-s prettyhtml:fix prettier:fix stylelint:fix lint:html"
+  },
+  "config": {
+    "files": "{*.json,*.yml,./**/*{.js,.ts,.json,.html,.scss}}",
+    "files_html": "./src/{*.html,**/*.html}",
+    "files_scss": "./src/{*.scss,**/*.scss}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run all:fix",
+      "post-merge": "npm i"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "compression-webpack-plugin": "^2.0.0",
+    "css-loader": "^2.1.1",
+    "cssnano": "^4.1.10",
+    "favicons-webpack-plugin": "0.0.9",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^0.6.0",
+    "node-sass": "^4.11.0",
+    "offline-plugin": "^5.0.6",
+    "postcss-loader": "^3.0.0",
+    "preload-webpack-plugin": "^3.0.0-beta.3",
+    "sass-loader": "^7.1.0",
+    "script-ext-html-webpack-plugin": "^2.1.3",
+    "style-loader": "^0.23.1",
+    "terser-webpack-plugin": "^1.2.3",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1",
+    "@starlab/stylelint-config": "^1.0.5",
+    "@starptech/prettyhtml": "^0.8.17",
+    "htmlhint": "^0.11.0",
+    "husky": "^1.3.1",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^10.0.1"
+  },
+  "dependencies": {
+    "bulma": "^0.7.4",
+    "lazysizes": "^4.1.7"
+  }
+}
