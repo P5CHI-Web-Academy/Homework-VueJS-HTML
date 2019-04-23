@@ -6,7 +6,6 @@
 }
 
 body {
-  box-sizing: border-box;
   margin: 0;
   color: #ffeead;
   background: #ffeead;
@@ -142,6 +141,7 @@ body {
   text-align: center;
 
   &__one {
+    box-sizing: border-box;
     grid-area: one;
     padding: 5px;
     background: #d6ccd3;
