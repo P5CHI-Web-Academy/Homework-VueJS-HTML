@@ -10,7 +10,7 @@
   }
 
   li {
-    margin: 0 1em;
+    margin-right: 1em;
   }
 
   a {
@@ -22,6 +22,8 @@
 
 @media (min-width: 426px) {
   .navbar {
+    padding: 1em;
+
     & &__hamburger-menu {
       display: none;
     }
@@ -31,8 +33,7 @@
       flex: 1;
 
       :last-child {
-        flex: 1;
-        text-align: right;
+        margin: 0 0 0 auto;
       }
     }
   }
