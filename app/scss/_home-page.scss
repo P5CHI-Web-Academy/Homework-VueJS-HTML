@@ -1,7 +1,7 @@
 .home-page {
   display: grid;
   grid-template:
-    'header  header' 3em
+    'logo  header' 3em
     'menu    menu'
     'content content' 1fr
     'footer  footer' auto
@@ -11,12 +11,10 @@
   margin: 1em;
 
   &__header {
-    display: grid;
+    display: flex;
     grid-area: header;
-    grid-template:
-      'logo  navbar' 3em
-      / 3em 1fr;
-    grid-gap: 0.25em;
+    align-items: center;
+    background-color: $secondary;
   }
 
   &__content {
@@ -51,6 +49,10 @@ $areas: (
 
 @media (min-width: 426px) {
   .home-page {
+    &__header {
+      padding: 0 1em;
+    }
+
     &__content {
       grid-template:
         'a d'
@@ -64,16 +66,10 @@ $areas: (
 @media (min-width: 769px) {
   .home-page {
     grid-template:
-      'header header' 3em
+      'logo header' 3em
       'menu   content' 1fr
       'footer footer' auto
       / 10.87em 1fr;
-
-    &__header {
-      grid-template:
-        'logo  navbar' 3em
-        / 10.87em 1fr;
-    }
 
     &__content {
       grid-template:

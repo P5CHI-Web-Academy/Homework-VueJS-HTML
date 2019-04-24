@@ -1,9 +1,7 @@
 .navbar {
   display: flex;
-  grid-area: navbar;
-  align-items: center;
+  flex: 1;
   justify-content: flex-end;
-  background-color: $secondary;
 
   &__menu {
     display: none;
@@ -22,8 +20,6 @@
 
 @media (min-width: 426px) {
   .navbar {
-    padding: 1em;
-
     & &__hamburger-menu {
       display: none;
     }
