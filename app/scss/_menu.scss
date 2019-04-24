@@ -31,8 +31,7 @@
 
     &__title {
       display: initial;
-      flex: 1;
-      margin: 0.5em 1em;
+      margin: 0.5em 1em auto;
       color: $color-1-hex;
       text-transform: uppercase;
     }
