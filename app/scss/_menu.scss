@@ -5,7 +5,7 @@
   justify-content: center;
   padding: 0.5em 1em;
   margin: 0 -1em;
-  background-color: $color-4-hex;
+  background-color: $primary;
 
   &__title {
     display: none;
@@ -24,7 +24,7 @@
     margin: 0 1em 0 0;
 
     a {
-      color: $color-1-hex;
+      color: $tertiary;
     }
   }
 }
@@ -38,7 +38,7 @@
     &__title {
       display: initial;
       margin: 0 1em auto;
-      color: $color-1-hex;
+      color: $tertiary;
       text-transform: uppercase;
     }
 
