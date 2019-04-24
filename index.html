@@ -1,0 +1,175 @@
+<html>
+<head>
+		<meta charset="UTF-8" />
+		<title>Homework-VueJS-HTML</title>
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <style>
+        body {
+            background-color: #ffeead;
+			font-size: 1.2em;
+            font-weight: bold;
+        }
+        .container {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px auto 50px;
+            height: 100%;
+        }
+        .header {
+            grid-column: 2 / -1;
+            background-color: #fd726d;
+            display: flex;
+            padding: 20px;
+        }
+
+		.center_text {
+            color: #ffeead;
+            display:flex;
+            align-items: center; 
+            justify-content: center; 
+        }
+
+		.header > div:nth-child(-n+3) {
+			margin-right: 20px;
+        }
+       
+        .header > div:nth-child(4) {
+			margin-left: auto;
+        }
+
+        .logo {
+            grid-row: 1 / 2;
+            background-color: #98cdb5;
+        }
+
+        .sidebar {
+            grid-row: 2 / 3;
+            background-color: #20cb9b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .sidebar div {
+            margin-top: 20px;
+        }
+
+        .sidebar > div:nth-child(1) {
+			margin-top: 0px;
+        }
+
+        .content {
+            grid-column: 2 / -1;
+            background-color: #fdcb65;
+            display: grid;
+            padding: 20px;
+            grid-gap: 8px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto;
+        }
+
+        .content1 {
+            background-color: #d6ccd3;
+            grid-column: 1 / 4;
+        }
+        .content2 {
+            background-color: #eaa1a7;
+            grid-column: 4 / 9;
+        }
+        .content3 {
+            background-color: #bdcebf;
+            grid-column: 1 / 9;
+        }
+        .content4 {
+            background-color: #ada399;
+            grid-column: 9 / -1;
+            grid-row: 1 / 3;
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+            background-color: #dea0de;
+        }
+    
+
+        @media only screen and (max-width: 600px) {
+
+    .content > div {
+		grid-column: 1 / -1;	
+	}
+
+	.content4 {
+		grid-row: 4 / 5;
+    }
+
+	.header {
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+  }
+  .header > div {
+    flex: 1 1 50%;
+  }
+
+        .container {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px auto auto auto 50px;
+            height: 100%;
+        }
+
+        .logo {
+            grid-column: 1 / -1;
+        }
+
+        .sidebar {
+            grid-column: 1 / -1;
+            grid-row: 4 / 5;
+        }
+
+        .content {
+            grid-column: 1 / -1;
+        }
+  
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo center_text">LOGO</div>
+
+        <div class="header">
+                <div class="center_text">HOME</div>
+                <div class="center_text">ABOUT</div>
+				<div class="center_text">GALLERY</div>
+				<div class="center_text">LOG IN</div>
+        </div>
+
+        <div class="content">
+            <div class="content1 center_text">CONTENT1</div>
+            <div class="content2 center_text">CONTENT2</div>
+            <div class="content3 center_text">CONTENT3</div>
+            <div class="content4 center_text">CONTENT4</div>
+        </div>
+
+        <div class="sidebar">
+            <div class="center_text">MENU</div>
+
+            <div>
+                <div class="center_text">Articles</div>
+                <div class="center_text">News</div>
+                <div class="center_text">Blog</div>
+            </div>
+        </div>
+
+        <div class="footer center_text">FOOTER</div>
+    </div>
+</body>
+</html>
