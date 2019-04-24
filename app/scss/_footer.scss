@@ -1,7 +1,9 @@
 .footer {
+  display: flex;
   grid-area: footer;
+  align-items: center;
+  justify-content: center;
   padding: 0.25em;
   color: $color-1-hex;
-  text-align: center;
   background-color: $color-4-hex;
 }
