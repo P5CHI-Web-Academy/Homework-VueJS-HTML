@@ -1,0 +1,19 @@
+@import './colors';
+@import './typography';
+
+// components
+@import './logo';
+@import './navbar';
+@import './menu';
+@import './footer';
+@import './item';
+@import './hamburger-menu';
+
+// pages
+@import './home-page';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: $tertiary;
+}

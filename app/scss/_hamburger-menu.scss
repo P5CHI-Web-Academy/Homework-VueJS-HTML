@@ -1,0 +1,15 @@
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 1.2em;
+  margin: 0.4em;
+
+  &__item {
+    width: 1.7em;
+    height: 0.2em;
+    background-color: $tertiary;
+    border-radius: 0.1em;
+  }
+}

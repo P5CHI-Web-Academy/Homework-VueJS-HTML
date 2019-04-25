@@ -1,0 +1,38 @@
+.navbar {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+
+  &__items {
+    display: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  a {
+    font-weight: 600;
+    color: $primaryDark;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 426px) {
+  .navbar {
+    & &__hamburger-menu {
+      display: none;
+    }
+
+    &__items {
+      display: flex;
+      flex: 1;
+    }
+  }
+}
