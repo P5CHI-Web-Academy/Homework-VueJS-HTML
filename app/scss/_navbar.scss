@@ -3,12 +3,18 @@
   flex: 1;
   justify-content: flex-end;
 
-  &__menu {
+  &__items {
     display: none;
   }
 
-  li {
-    margin-right: 1em;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+
+    &:last-child {
+      margin-left: auto;
+    }
   }
 
   a {
@@ -24,13 +30,9 @@
       display: none;
     }
 
-    &__menu {
+    &__items {
       display: flex;
       flex: 1;
-
-      :last-child {
-        margin: 0 0 0 auto;
-      }
     }
   }
 }
