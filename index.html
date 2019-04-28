@@ -5,6 +5,7 @@
     <style>
         html {
             font-size: 16px;
+            font-weight: bold;
         }
         @media screen and (min-width: 320px) {
             html {
@@ -60,16 +61,16 @@
 
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+
+            padding: 10px;
         }
 
-        div {
-            font-weight: bold;
+        .menu > div:last-child {
+            margin-top: auto;
         }
 
-        .menu div {
-            margin: 10px;
+        .menu > div:last-child > div {
+            margin-top: 20px;
         }
 
         .content {
