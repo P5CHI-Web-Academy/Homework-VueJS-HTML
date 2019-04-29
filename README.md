@@ -14,3 +14,13 @@ The layout should be fully responsive, should look good on all devices (from mob
 Any animations, transitions and other creativity are welcome (but not required)
 
 Using preprocessors is a big plus (but not required)
+
+
+*Installation:
+npm install
+
+*Development:
+npm start
+
+*Production:
+npm run build
