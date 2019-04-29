@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/cherry.png">
+        
+        <title>VueJS Academy &mdash; MAfonina's HTML&amp;CSS homework</title>
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/favicons/site.webmanifest">
+        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/favicons/favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body class="container">
+       
+        <div class="logo">
+           <svg class="logo__image">
+               <use xlink:href="img/sprite.svg#cherry"></use>
+           </svg>
+        </div>
+        
+        <header class="header">
+            <nav class="main-navigation">
+                <ul class="main-navigation__list">
+                    <li class="main-navigation__item">Home</li>
+                    <li class="main-navigation__item">About</li>
+                    <li class="main-navigation__item">Gallery</li>
+                </ul>
+            </nav>
+            <span>Log in</span>
+        </header>
+        
+        <aside class="sidebar">
+            <div class="side-navigation">
+                <span class="side-navigation__menu">Menu</span>
+                
+                <input type="checkbox" class="side-navigation__checkbox" id="navigation-toggle">
+                <label for="navigation-toggle" class="side-navigation__button">
+                    <svg class="side-navigation__button-icon">
+                        <use xlink:href="img/sprite.svg#add"></use>
+                    </svg>
+                </label>
+                
+                <div class="side-navigation__background">&nbsp;</div>
+                
+                <ul class="side-navigation__list">
+                    <li class="side-navigation__item">Articles</li>
+                    <li class="side-navigation__item">News</li>
+                    <li class="side-navigation__item">Blog</li>
+                </ul>
+            </div>
+        </aside>
+        
+        <div class="content">
+            <div class="content--1">
+                <span>Content 1</span>
+            </div>
+            <div class="content--2">
+                <span>Content 2</span>
+            </div>
+            <div class="content--3">
+                <span>Content 3</span>
+            </div>
+            <div class="content--4">
+                <span>Content 4</span>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <span>Footer</span>
+        </footer>
+        
+    </body>
+</html>

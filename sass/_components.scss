@@ -1,0 +1,9 @@
+.logo__image {
+    height: 4.5rem;
+    width: 4.5rem;
+    transition: 1s;
+    
+    &:hover {
+        transform: rotate(1080deg);
+    }
+}
