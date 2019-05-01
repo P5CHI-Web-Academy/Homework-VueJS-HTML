@@ -1,15 +1,13 @@
 .content {
-    
     padding: 2.5rem;
-    
     display: grid;
-    grid-template-columns: .23fr .44fr .33fr; 
+    grid-template-columns: 2fr 4fr 3fr; 
     grid-gap: 1.1rem;
     grid-auto-flow: dense;
     
     @media(max-width: 992px) {
         padding: 1.5rem;
-        grid-template-columns: .4fr .6fr; 
+        grid-template-columns: 2fr 3fr; 
     }
     
     @media(max-width: 768px) {
@@ -23,14 +21,12 @@
         
     &--1 {
         background-color: $color-grey-light;
-        
         display: flex;
         @include center-content-in-flex-item;
     }
         
     &--2 {
         background-color: $color-primary;
-               
         display: flex;
         @include center-content-in-flex-item;
     }
@@ -38,20 +34,18 @@
     &--3 {
         background-color: lighten($color-primary, 10%);
         grid-column: span 2;
+        display: flex;
+        @include center-content-in-flex-item;
         
         @media(max-width: 768px) {
             grid-column: span 1;
             grid-row: span 2;
         }
-        
-        display: flex;
-        @include center-content-in-flex-item;
     }
         
     &--4 {
         background-color: $color-secondary;
         grid-row: span 2;
-        
         display: flex;
         @include center-content-in-flex-item;
         

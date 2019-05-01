@@ -3,13 +3,10 @@
     width: 100vw;
     height: 900px; // later will be defined by the content
     padding: 2rem;
-    
     display: grid;
     grid-gap: .8rem;
-    
-    grid-template-rows: .07fr .86fr .07fr;
-    grid-template-columns: .14fr .86fr;
-    
+    grid-template-rows: 6rem 1fr 6rem;
+    grid-template-columns: 8rem 1fr;
     grid-template-areas: "l h"
                         "s c"
                         "f f";
@@ -21,17 +18,15 @@
     @media(max-width: 480px) {
         padding: 1rem;
         grid-gap: 0;
-        grid-template-columns: .14fr .72fr .14fr;
+        grid-template-columns: 7rem 1fr 7rem;
         grid-template-areas: "l h s"
                         "c c c"
                         "f f f";
     }
     
-    
     .logo {
         background-color: $color-text-secondary;
         grid-area: l;
-        
         display: flex;
         @include center-content-in-flex-item;
     }
@@ -39,22 +34,19 @@
     .header {
         background-color: $color-primary-dark;
         grid-area: h;
-        
         padding: .5rem 3rem;
-        
         display: flex;
         justify-content: space-between;
         align-items: center;
         
         @media(max-width: 480px) {
-            padding: .5rem 1.5rem;
+            padding: .5rem 1rem;
         }
     }
     
     .sidebar {
         background-color: $color-primary-dark;
         grid-area: s;
-        
         display: flex;
         justify-content: center;
     }
@@ -67,7 +59,6 @@
     .footer {
         background-color: $color-grey-dark;
         grid-area: f;
-        
         display: flex;
         @include center-content-in-flex-item;
     }
