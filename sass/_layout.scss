@@ -1,7 +1,7 @@
 .container {
     background-color: $color-divider;
     width: 100vw;
-    height: 900px; // later will be defined by the content
+    min-height: 100vh;
     padding: 2rem;
     display: grid;
     grid-gap: .8rem;
