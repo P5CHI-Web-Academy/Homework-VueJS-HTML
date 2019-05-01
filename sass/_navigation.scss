@@ -49,6 +49,17 @@
     align-items: center;
     padding: 2rem 0;
     
+    @media(max-width: 480px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 0;
+        background-color: rgba($color-primary-dark, .7);
+        z-index: 100;
+        transition: .3s;
+    }
+    
     &__menu {
         @media(max-width: 480px) {
             display: none;
@@ -64,7 +75,6 @@
         
         @media(max-width: 480px) {
             display: none;
-            
             position: fixed;
             top: 9rem;
             right: 9%;
@@ -99,6 +109,9 @@
             }
         }
     }
+}
+
+.sidebar {
     
     &__checkbox {
         display: none;
@@ -126,19 +139,7 @@
         }
     }
     
-    &__background {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 0;
-        background-color: rgba($color-primary-dark, .7);
-        z-index: 100;
-        transition: .3s;
-        
-    }
-    
-    &__checkbox:checked ~ &__background {
+    &__checkbox:checked ~ .side-navigation {
         width: 25%;
     }
     
@@ -146,7 +147,7 @@
         transform: rotate(135deg);
     }
     
-    &__checkbox:checked ~ &__list {
+    &__checkbox:checked ~ .side-navigation > .side-navigation__list {
         display: inline-block;
     }
 }
