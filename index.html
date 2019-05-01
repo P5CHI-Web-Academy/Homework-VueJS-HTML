@@ -7,7 +7,6 @@
         
         <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/cherry.png">
         
         <title>VueJS Academy &mdash; MAfonina's HTML&amp;CSS homework</title>
         
@@ -21,64 +20,67 @@
         <meta name="msapplication-config" content="/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
     </head>
-    <body class="container">
+    <body>
+        <div class="container">
+            
+            <div class="logo">
+                <svg class="logo__image">
+                    <use xlink:href="img/sprite.svg#cherry"></use>
+                </svg>
+            </div>
+
+            <header class="header">
+                <nav class="main-navigation">
+                    <ul class="main-navigation__list">
+                        <li class="main-navigation__item">Home</li>
+                        <li class="main-navigation__item">About</li>
+                        <li class="main-navigation__item">Gallery</li>
+                    </ul>
+                </nav>
+                <span>Log in</span>
+            </header>
+
+            <aside class="sidebar">
+                <div class="side-navigation">
+                    <span class="side-navigation__menu">Menu</span>
+
+                    <input type="checkbox" class="side-navigation__checkbox" id="navigation-toggle">
+                    <label for="navigation-toggle" class="side-navigation__button">
+                        <svg class="side-navigation__button-icon">
+                            <use xlink:href="img/sprite.svg#add"></use>
+                        </svg>
+                    </label>
+
+                    <div class="side-navigation__background">&nbsp;</div>
+
+                    <ul class="side-navigation__list">
+                        <li class="side-navigation__item">Articles</li>
+                        <li class="side-navigation__item">News</li>
+                        <li class="side-navigation__item">Blog</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="content">
+                <div class="content--1">
+                    <span>Content 1</span>
+                </div>
+                <div class="content--2">
+                    <span>Content 2</span>
+                </div>
+                <div class="content--3">
+                    <span>Content 3</span>
+                </div>
+                <div class="content--4">
+                    <span>Content 4</span>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <span>Footer</span>
+            </footer>
+            
+        </div>
        
-        <div class="logo">
-           <svg class="logo__image">
-               <use xlink:href="img/sprite.svg#cherry"></use>
-           </svg>
-        </div>
-        
-        <header class="header">
-            <nav class="main-navigation">
-                <ul class="main-navigation__list">
-                    <li class="main-navigation__item">Home</li>
-                    <li class="main-navigation__item">About</li>
-                    <li class="main-navigation__item">Gallery</li>
-                </ul>
-            </nav>
-            <span>Log in</span>
-        </header>
-        
-        <aside class="sidebar">
-            <div class="side-navigation">
-                <span class="side-navigation__menu">Menu</span>
-                
-                <input type="checkbox" class="side-navigation__checkbox" id="navigation-toggle">
-                <label for="navigation-toggle" class="side-navigation__button">
-                    <svg class="side-navigation__button-icon">
-                        <use xlink:href="img/sprite.svg#add"></use>
-                    </svg>
-                </label>
-                
-                <div class="side-navigation__background">&nbsp;</div>
-                
-                <ul class="side-navigation__list">
-                    <li class="side-navigation__item">Articles</li>
-                    <li class="side-navigation__item">News</li>
-                    <li class="side-navigation__item">Blog</li>
-                </ul>
-            </div>
-        </aside>
-        
-        <div class="content">
-            <div class="content--1">
-                <span>Content 1</span>
-            </div>
-            <div class="content--2">
-                <span>Content 2</span>
-            </div>
-            <div class="content--3">
-                <span>Content 3</span>
-            </div>
-            <div class="content--4">
-                <span>Content 4</span>
-            </div>
-        </div>
-        
-        <footer class="footer">
-            <span>Footer</span>
-        </footer>
-        
     </body>
 </html>
