@@ -1,0 +1,43 @@
+// COLOR VARIABLES
+$color-primary: #8bc34a;
+$color-primary-dark: #689f38;
+$color-primary-light: #dcedc8;
+$color-secondary: #fd4365;
+
+$color-grey-dark: #636363;
+$color-grey-light: #888;
+
+$color-text-primary: #212121;
+$color-text-secondary: #757575;
+
+$color-divider: #bdbdbd;
+$color-white: #fefefe;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px;
+    
+    @media(min-width: 1400px) {
+        font-size: 75%; // 1rem = 12px;
+    }
+    
+    @media(max-width: 992px) {
+        font-size: 56.25%; // 1rem = 9px; 
+    }
+    
+    @media(max-width: 768px) {
+        font-size: 50%; // 1rem = 8px; 
+    }
+}
+
+
+
