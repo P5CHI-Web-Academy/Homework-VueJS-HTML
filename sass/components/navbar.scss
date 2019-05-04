@@ -1,0 +1,23 @@
+.header__navbar {
+	padding: 0.5rem 1rem;
+	display: flex;
+	align-items: center;
+
+	.navbar__items {
+		display: flex;
+		flex: 1;
+		list-style: none;
+		.navbar__item {
+			text-transform: uppercase;
+			&:not(:last-child) {
+				margin-right: 2rem;
+			}
+			&:last-child {
+				margin-left: auto;
+			}
+			a {
+				text-decoration: none;	
+			}	
+		}
+	}
+}

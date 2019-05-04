@@ -1,0 +1,11 @@
+.btn {
+	color: $color-white;
+
+	&:hover {
+		color: $color-button;
+	}
+
+	&:active {
+		color: rgba($color-button, 0.7);
+	}
+}
