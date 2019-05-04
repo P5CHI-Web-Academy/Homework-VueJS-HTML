@@ -26,14 +26,6 @@ body {
   justify-content: center;
   align-items: center; }
 
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem); }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-
 .header__navbar {
   padding: 0.5rem 1rem;
   display: flex;
@@ -129,7 +121,7 @@ body {
   background-color: #d5d5d5; }
 
 .content__item-3 {
-  background-color: #9fa6ad; }
+  background-color: #b7bfc9; }
 
 .content__item-4 {
   background-color: #b5a1ac; }
