@@ -21,18 +21,18 @@
             height: 100%;
         }
 
-        .header {
+        header {
             grid-column: 2 / -1;
             background-color: #ff706a;
             display: flex;
             padding: 15px;
         }
 
-        .header > div:not(:last-child) {
+        header > div:not(:last-child) {
             margin-right: 15px;
         }
 
-        .header > div:last-child {
+        header > div:last-child {
             margin-left: auto;
         }
 
@@ -120,11 +120,11 @@
                 grid-row: 1 / 2;
             }
 
-            .header {
+            header {
                 grid-row: 2 / 3;
             }
 
-            .logo, .header, footer {
+            .logo, header, footer {
                 grid-column: 1 / -1;
             }
 
@@ -151,12 +151,12 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
+        <header>
             <div class="text-centered">HOME</div>
             <div class="text-centered">ABOUT</div>
             <div class="text-centered">GALLERY</div>
             <div class="text-centered">LOG IN</div>
-        </div>
+        </header>
         <div class="logo text-centered">LOGO</div>
         <div class="menu">
             <div class="text-centered">MENU</div>
