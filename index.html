@@ -32,11 +32,11 @@
             justify-content: center; 
         }
 
-		.header > div:nth-child(-n+3) {
-			margin-right: 20px;
+		.header > div:not(:last-child) { 
+            margin-right: 20px;
         }
        
-        .header > div:nth-child(4) {
+        .header > div:last-child {
 			margin-left: auto;
         }
 
