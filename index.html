@@ -18,25 +18,27 @@
             grid-template-rows: 50px auto 50px;
             height: 100%;
         }
-        .header {
+        header {
             grid-column: 2 / -1;
             background-color: #fd726d;
             display: flex;
             padding: 20px;
+            align-items: center;
+            color: #ffeead;
         }
 
 		.center_text {
             color: #ffeead;
-            display:flex;
+            display: flex;
             align-items: center; 
             justify-content: center; 
         }
 
-		.header > div:not(:last-child) { 
+		header > div:not(:last-child) { 
             margin-right: 20px;
         }
        
-        .header > div:last-child {
+        header > div:last-child {
 			margin-left: auto;
         }
 
@@ -107,13 +109,16 @@
 		grid-row: 4 / 5;
     }
 
-	.header {
+	header {
     flex-wrap: wrap;
     grid-column: 1 / -1;
-  }
-  .header > div {
+    }
+
+    header > div {
+    display: flex;
     flex: 1 1 100%;
-  }
+    justify-content: center; 
+    }
 
         .container {
             display: grid;
@@ -136,7 +141,7 @@
             grid-column: 1 / -1;
         }
 
-        .header > div:not(:last-child) { 
+        header > div:not(:last-child) { 
             margin-right: 0px;
         }
   
@@ -149,12 +154,12 @@
 
         <div class="logo center_text">LOGO</div>
 
-        <div class="header">
-                <div class="center_text">HOME</div>
-                <div class="center_text">ABOUT</div>
-				<div class="center_text">GALLERY</div>
-				<div class="center_text">LOG IN</div>
-        </div>
+        <header>
+                <div>HOME</div>
+                <div>ABOUT</div>
+				<div>GALLERY</div>
+				<div>LOG IN</div>
+        </header>
 
         <div class="content">
             <div class="content1 center_text">CONTENT1</div>
