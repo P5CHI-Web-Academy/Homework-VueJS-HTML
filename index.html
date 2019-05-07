@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Homework HTML/CSS</title>
+    <style>
+        html {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #ffeead;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px auto 50px;
+            height: 100%;
+        }
+
+        header {
+            grid-column: 2 / -1;
+            background-color: #ff706a;
+            display: flex;
+            padding: 15px;
+        }
+
+        header > div:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        header > div:last-child {
+            margin-left: auto;
+        }
+
+        .logo {
+            grid-row: 1 / 2;
+            background-color: #96ceb4;
+        }
+
+        aside {
+            grid-row: 2 / 3;
+            background-color: #00cc9a;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        aside > div:first-child {
+            margin-bottom: auto;
+        }
+
+        aside > div:last-child > div {
+            margin-top: 20px;
+        }
+
+        main {
+            grid-column: 2 / -1;
+            background-color: #fecc5c;
+            display: grid;
+            padding: 20px;
+            grid-gap: 5px;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto;
+        }
+
+        .content1 {
+            background-color: #d6ccd3;
+            grid-column: 1 / 4;
+        }
+
+        .content2 {
+            background-color: #eca1a7;
+            grid-column: 4 / 9;
+        }
+
+        .content3 {
+            background-color: #bdcebf;
+            grid-column: 1 / 9;
+        }
+
+        .content4 {
+            background-color: #ada398;
+            grid-column: 9 / -1;
+            grid-row: 1 / 3;
+        }
+
+        footer {
+            grid-column: 1 / -1;
+            background-color: #df9edf;
+        }
+
+        .text-centered {
+            color: #ffeead;
+            display:flex;
+            align-items: center; /* Vertical center alignment */
+            justify-content: center; /* Horizontal center alignment */
+        }
+
+        @media screen and (min-width: 320px) {
+            html {
+                font-size: calc(15px + 6 * ((100vw - 320px) / 680));
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            html {
+                font-size: 22px;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            .container {
+                grid-template-rows: 50px 50px auto 50px;
+            }
+
+            .logo {
+                grid-row: 1 / 2;
+            }
+
+            header {
+                grid-row: 2 / 3;
+            }
+
+            .logo, header, footer {
+                grid-column: 1 / -1;
+            }
+
+            aside {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+            }
+
+            main {
+                grid-column: 2 / -1;
+            }
+        }
+
+        @media only screen and (max-width: 575px) {
+            .content1, .content2, .content3, .content4 {
+                grid-column: 1 / -1;
+            }
+
+            .content4 {
+                grid-row: 3 / -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="text-centered">HOME</div>
+            <div class="text-centered">ABOUT</div>
+            <div class="text-centered">GALLERY</div>
+            <div class="text-centered">LOG IN</div>
+        </header>
+        <div class="logo text-centered">LOGO</div>
+        <aside>
+            <div class="text-centered">MENU</div>
+            <div class="text-centered">Articles</div>
+            <div class="text-centered">News</div>
+            <div class="text-centered">Blog</div>
+        </aside>
+        <main>
+            <div class="content1 text-centered">CONTENT1</div>
+            <div class="content2 text-centered">CONTENT2</div>
+            <div class="content3 text-centered">CONTENT3</div>
+            <div class="content4 text-centered">CONTENT4</div>
+        </main>
+        <footer class="text-centered">FOOTER</footer>
+    </div>
+</body>
+</html>
