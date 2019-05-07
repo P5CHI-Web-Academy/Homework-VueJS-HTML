@@ -53,16 +53,15 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
             padding: 30px;
         }
 
-        sidebar div {
+        sidebar div:not(:first-child) {
             margin-top: 20px;
         }
 
-        sidebar > div:nth-child(1) {
-			margin-top: 0px;
+        sidebar > div:first-child {
+            margin-bottom: auto;
         }
 
         .content {
@@ -169,13 +168,10 @@
         </div>
 
         <sidebar>
-            <div class="center_text">MENU</div>
-
-            <div>
+                <div class="center_text">MENU</div>
                 <div class="center_text">Articles</div>
                 <div class="center_text">News</div>
                 <div class="center_text">Blog</div>
-            </div>
         </sidebar>
 
         <footer class="center_text">FOOTER</footer>
