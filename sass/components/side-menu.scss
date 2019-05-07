@@ -3,7 +3,6 @@
 	text-transform: uppercase;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
 	flex-direction: column;
 
 	.side-menu__items {
@@ -13,7 +12,9 @@
 	  	margin-top: auto;
 	  	list-style: none;
 	  	.side-menu__item {
-			margin-top: 2.5rem;
+	  		&:not(:first-child) {
+	  			margin-top: 2.5rem;	
+	  		}
 	  		a {
 		  		text-decoration: none;
 		  	}	
