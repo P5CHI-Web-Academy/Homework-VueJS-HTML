@@ -21,9 +21,12 @@
         header {
             grid-column: 2 / -1;
             background-color: #fd726d;
+        }
+
+        nav {
             display: flex;
-            padding: 20px;
             align-items: center;
+            padding: 14px;
             color: #ffeead;
         }
 
@@ -34,11 +37,11 @@
             justify-content: center; 
         }
 
-		header > div:not(:last-child) { 
+		nav > div:not(:last-child) { 
             margin-right: 20px;
         }
        
-        header > div:last-child {
+        nav > div:last-child {
 			margin-left: auto;
         }
 
@@ -100,24 +103,31 @@
 
         @media only screen and (max-width: 600px) {
 
-    .content > div {
-		grid-column: 1 / -1;	
-	}
+        .content > div {
+            grid-column: 1 / -1;	
+        }
 
-	.content4 {
-		grid-row: 4 / 5;
-    }
+        .content4 {
+            grid-row: 4 / 5;
+        }
 
-	header {
-    flex-wrap: wrap;
-    grid-column: 1 / -1;
-    }
+        header {
+            grid-column: 1 / -1;
+        }
 
-    header > div {
-    display: flex;
-    flex: 1 1 100%;
-    justify-content: center; 
-    }
+        nav {
+            flex-wrap: wrap;
+        }
+
+        nav > div {
+            display: flex;
+            flex: 1 1 100%;
+            justify-content: center; 
+        }
+
+        nav > div:not(:last-child) { 
+            margin-right: 0px;
+        }
 
         .container {
             display: grid;
@@ -143,10 +153,6 @@
         .content {
             grid-column: 1 / -1;
         }
-
-        header > div:not(:last-child) { 
-            margin-right: 0px;
-        }
   
 }
 
@@ -158,10 +164,12 @@
         <div class="logo center_text">LOGO</div>
 
         <header>
+            <nav>
                 <div>HOME</div>
                 <div>ABOUT</div>
 				<div>GALLERY</div>
-				<div>LOG IN</div>
+                <div>LOG IN</div>
+            </nav>    
         </header>
 
         <div class="content">
