@@ -1,192 +1,192 @@
 <html>
-<head>
-		<meta charset="UTF-8" />
-		<title>Homework-VueJS-HTML</title>
-		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
-		<meta content="width=device-width, initial-scale=1" name="viewport" />
+    <head>
+        <meta charset="UTF-8" />
+        <title>Homework-VueJS-HTML</title>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <style>
-        body {
-            background-color: #ffeead;
-			font-size: 1.2em;
-            font-weight: bold;
-        }
-        .container {
-            display: grid;
-            grid-gap: 3px;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: 50px auto 50px;
-            height: 100%;
-        }
-        header {
-            grid-column: 2 / -1;
-            background-color: #fd726d;
-        }
+        <style>
+            body {
+                background-color: #ffeead;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            .container {
+                display: grid;
+                grid-gap: 3px;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 50px auto 50px;
+                height: 100%;
+            }
+            header {
+                grid-column: 2 / -1;
+                background-color: #fd726d;
+            }
 
-        nav {
-            display: flex;
-            align-items: center;
-            padding: 14px;
-            color: #ffeead;
-        }
+            nav {
+                display: flex;
+                align-items: center;
+                padding: 14px;
+                color: #ffeead;
+            }
 
-		.center_text {
-            color: #ffeead;
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-        }
+            .center_text {
+                color: #ffeead;
+                display: flex;
+                align-items: center; 
+                justify-content: center; 
+            }
 
-		nav > div:not(:last-child) { 
-            margin-right: 20px;
-        }
-       
-        nav > div:last-child {
-			margin-left: auto;
-        }
+            nav > div:not(:last-child) { 
+                margin-right: 20px;
+            }
+        
+            nav > div:last-child {
+                margin-left: auto;
+            }
 
-        .logo {
-            grid-row: 1 / 2;
-            background-color: #98cdb5;
-        }
+            .logo {
+                grid-row: 1 / 2;
+                background-color: #98cdb5;
+            }
 
-        sidebar {
-            grid-row: 2 / 3;
-            background-color: #20cb9b;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 30px;
-        }
+            aside {
+                grid-row: 2 / 3;
+                background-color: #20cb9b;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+            }
 
-        sidebar div:not(:first-child) {
-            margin-top: 20px;
-        }
+            aside div:not(:first-child) {
+                margin-top: 20px;
+            }
 
-        sidebar > div:first-child {
-            margin-bottom: auto;
-        }
+            aside > div:first-child {
+                margin-bottom: auto;
+            }
 
-        .content {
-            grid-column: 2 / -1;
-            background-color: #fdcb65;
-            display: grid;
-            padding: 20px;
-            grid-gap: 8px;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: auto auto;
-        }
+            .content {
+                grid-column: 2 / -1;
+                background-color: #fdcb65;
+                display: grid;
+                padding: 20px;
+                grid-gap: 8px;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: auto auto;
+            }
 
-        .content1 {
-            background-color: #d6ccd3;
-            grid-column: 1 / 4;
-        }
-        .content2 {
-            background-color: #eaa1a7;
-            grid-column: 4 / 9;
-        }
-        .content3 {
-            background-color: #bdcebf;
-            grid-column: 1 / 9;
-        }
-        .content4 {
-            background-color: #ada399;
-            grid-column: 9 / -1;
-            grid-row: 1 / 3;
-        }
+            .content1 {
+                background-color: #d6ccd3;
+                grid-column: 1 / 4;
+            }
+            .content2 {
+                background-color: #eaa1a7;
+                grid-column: 4 / 9;
+            }
+            .content3 {
+                background-color: #bdcebf;
+                grid-column: 1 / 9;
+            }
+            .content4 {
+                background-color: #ada399;
+                grid-column: 9 / -1;
+                grid-row: 1 / 3;
+            }
 
-        footer {
-            grid-column: 1 / -1;
-            background-color: #dea0de;
-        }
+            footer {
+                grid-column: 1 / -1;
+                background-color: #dea0de;
+            }
+        
+
+            @media only screen and (max-width: 600px) {
+
+                .content > div {
+                    grid-column: 1 / -1;	
+                }
+
+                .content4 {
+                    grid-row: 4 / 5;
+                }
+
+                header {
+                    grid-column: 1 / -1;
+                }
+
+                nav {
+                    flex-wrap: wrap;
+                }
+
+                nav > div {
+                    display: flex;
+                    flex: 1 1 100%;
+                    justify-content: center; 
+                }
+
+                nav > div:not(:last-child) { 
+                    margin-right: 0;
+                }
+
+                .container {
+                    display: grid;
+                    grid-gap: 3px;
+                    grid-template-columns: repeat(12, 1fr);
+                    grid-template-rows: 50px 1fr 1fr 1fr 50px;
+                    height: 100%;
+                }
+
+                .logo {
+                    grid-column: 1 / -1;
+                }
+
+                aside {
+                    grid-column: 1 / -1;
+                    grid-row: 4 / 5;
+                }
+
+                aside > div:first-child {
+                    margin-bottom: 0;
+                }
+
+                .content {
+                    grid-column: 1 / -1;
+                }
     
+            }
 
-        @media only screen and (max-width: 600px) {
+        </style>
+    </head>
+    <body>
+        <div class="container">
 
-        .content > div {
-            grid-column: 1 / -1;	
-        }
+            <div class="logo center_text">LOGO</div>
 
-        .content4 {
-            grid-row: 4 / 5;
-        }
+            <header>
+                <nav>
+                    <div>HOME</div>
+                    <div>ABOUT</div>
+                    <div>GALLERY</div>
+                    <div>LOG IN</div>
+                </nav>    
+            </header>
 
-        header {
-            grid-column: 1 / -1;
-        }
+            <div class="content">
+                <div class="content1 center_text">CONTENT1</div>
+                <div class="content2 center_text">CONTENT2</div>
+                <div class="content3 center_text">CONTENT3</div>
+                <div class="content4 center_text">CONTENT4</div>
+            </div>
 
-        nav {
-            flex-wrap: wrap;
-        }
-
-        nav > div {
-            display: flex;
-            flex: 1 1 100%;
-            justify-content: center; 
-        }
-
-        nav > div:not(:last-child) { 
-            margin-right: 0px;
-        }
-
-        .container {
-            display: grid;
-            grid-gap: 3px;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: 50px auto auto auto 50px;
-            height: 100%;
-        }
-
-        .logo {
-            grid-column: 1 / -1;
-        }
-
-        sidebar {
-            grid-column: 1 / -1;
-            grid-row: 4 / 5;
-        }
-
-        sidebar > div:first-child {
-            margin-bottom: 0px;
-        }
-
-        .content {
-            grid-column: 1 / -1;
-        }
-  
-}
-
-    </style>
-</head>
-<body>
-    <div class="container">
-
-        <div class="logo center_text">LOGO</div>
-
-        <header>
-            <nav>
-                <div>HOME</div>
-                <div>ABOUT</div>
-				<div>GALLERY</div>
-                <div>LOG IN</div>
-            </nav>    
-        </header>
-
-        <div class="content">
-            <div class="content1 center_text">CONTENT1</div>
-            <div class="content2 center_text">CONTENT2</div>
-            <div class="content3 center_text">CONTENT3</div>
-            <div class="content4 center_text">CONTENT4</div>
-        </div>
-
-        <sidebar>
+            <aside>
                 <div class="center_text">MENU</div>
                 <div class="center_text">Articles</div>
                 <div class="center_text">News</div>
                 <div class="center_text">Blog</div>
-        </sidebar>
+            </aside>
 
-        <footer class="center_text">FOOTER</footer>
-    </div>
-</body>
+            <footer class="center_text">FOOTER</footer>
+        </div>
+    </body>
 </html>
