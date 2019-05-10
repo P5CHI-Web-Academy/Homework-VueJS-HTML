@@ -12,7 +12,7 @@ header {
 
 header .logo {
   grid-area: logo;
-} 
+}
 
 header .logo .logo-image {
   min-width: 90px;
@@ -39,20 +39,20 @@ header nav ul li {
   height: 100%;
 }
 
- header nav ul li span {
- display: inline-block;
- line-height: 100px;
- height: 100%;
- padding: 0 20px;
- transition: background-color 300ms ease-in-out;
+header nav ul li span {
+  display: inline-block;
+  line-height: 100px;
+  height: 100%;
+  padding: 0 20px;
+  transition: background-color 300ms ease-in-out;
 }
 
 
 @media (max-width: 575px) {
   header {
     grid-template-rows: 100px 50px;
-    grid-template-columns: 1fr; 
-    grid-template-areas: 
+    grid-template-columns: 1fr;
+    grid-template-areas:
       'logo'
       'nav';
   }
@@ -68,7 +68,7 @@ header nav ul li {
     padding: 0 20px;
   }
 
-  header .headerLogIn {
+  header .header-log-in {
     display: none;
   }
 
@@ -80,8 +80,8 @@ header nav ul li {
 @media (min-width: 576px) {
   header {
     grid-template-rows: 100px;
-    grid-template-columns: 1fr auto 1fr; 
-    grid-template-areas: 
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
       'logo nav login';
   }
 
@@ -89,22 +89,20 @@ header nav ul li {
     display: none;
   }
 
-  header .headerLogIn {
+  header .header-log-in {
     grid-area: login;
-    line-height: 100px;
-    position: absolute;
-    top: 0;
-    right: 40px;
+    align-self: center;
+    justify-self: center;
   }
 
-  header .headerLogIn span {
+  header .header-log-in span {
     border: 3px solid #f9cb12;
     border-radius: 30px;
     padding: 5px 20px;
     cursor: pointer;
-    transition: 
-      border-color 200ms ease-in-out, 
-      border-radius 200ms ease-in-out, 
+    transition:
+      border-color 200ms ease-in-out,
+      border-radius 200ms ease-in-out,
       color 200ms ease-in-out;
   }
 }
@@ -112,8 +110,8 @@ header nav ul li {
 @media (min-width: 992px) {
   header {
     grid-template-rows: 100px;
-    grid-template-columns: 400px auto 200px; 
-    grid-template-areas: 
+    grid-template-columns: 400px auto 200px;
+    grid-template-areas:
       "logo nav login";
   }
 
@@ -136,10 +134,8 @@ header nav ul li {
 
   header nav ul {
     display: flex;
-  }
-  
-  header nav ul li {
-    margin-left: 10px;
+    width: 250px;
+    justify-content: space-between;
   }
 
   header nav ul li span {
@@ -153,21 +149,19 @@ header nav ul li {
 
   @keyframes navItems {
     0% {
-      margin-top: 0px;
+      height: 100%;
     }
 
     50% {
-      margin-top: -15px;
-      line-height: 130px;
+      height: 80%;
     }
 
     100% {
-      margin-top: 0px;
-      line-height: 100px;
+      height: 100%;
     }
   }
 
-  header .headerLogIn span:hover {
+  header .header-log-in span:hover {
     border-color: white;
     border-radius: 10px;
     color: #f9cb12;

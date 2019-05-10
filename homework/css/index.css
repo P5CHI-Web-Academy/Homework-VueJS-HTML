@@ -1,5 +1,8 @@
 body {
   background-color: #e2fff4;
+}
+
+.container {
   display: grid;
   grid-gap: 10px;
   color: white;
@@ -7,17 +10,17 @@ body {
   position: relative;
 }
 
-body ul {
+.container ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 @media (max-width: 575px) {
-  body {
+  .container {
     grid-template-rows: auto 100px auto 50px;
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       'header'
       'aside'
       'main'
@@ -26,10 +29,10 @@ body ul {
 }
 
 @media (min-width: 576px) {
-  body {
+  .container {
     grid-template-rows: 100px 100px auto 50px;
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       'header'
       'aside'
       'main'
@@ -38,10 +41,10 @@ body ul {
 }
 
 @media (min-width: 992px) {
-  body {
+  .container {
     grid-template-rows: 100px calc(100vh - 170px) 50px;
     grid-template-columns: 200px auto;
-    grid-template-areas: 
+    grid-template-areas:
       'header header'
       'aside main'
       'footer footer';

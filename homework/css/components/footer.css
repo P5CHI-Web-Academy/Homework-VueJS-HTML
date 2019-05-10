@@ -1,34 +1,30 @@
 footer {
   grid-area: footer;
-  background-color:  rgba(67, 71, 67, 0.7);
+  background-color: rgba(67, 71, 67, 0.7);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
-footer .media-icons {
+footer .media-icons ul {
   display: flex;
-  padding: 0 30px;
+  justify-content: space-between;
+  width: 130px;
 }
 
-footer .media-icons div {
+footer .media-icons ul li {
+  font-size: 1.5em;
+  display: inline-block;
   cursor: pointer;
 }
 
-footer .media-icons span {
-  font-size: 1.5em;
-  display: inline-block;
-  margin-left: 40px;
-}
-
 @media (min-width: 992px) {
-  footer .media-icons span {
+  footer .media-icons ul li {
     transition: transform 400ms ease-in-out;
   }
 
-  footer .media-icons span:hover {
+  footer .media-icons ul li:hover {
     transform: scale(1.5);
   }
 }
-
