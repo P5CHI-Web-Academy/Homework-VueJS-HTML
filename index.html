@@ -12,44 +12,54 @@
             line-height: 2;
             font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
         }
+
         .grid-container {
             display: grid;
             grid-template-areas: 'l l n n n n n n n n n n' 'a a m m m m m m m m m m' 'f f f f f f f f f f f f';
+            grid-template-columns: 205px auto;
+            grid-template-rows: 60px auto 60px;
             grid-gap: 5px;
             background-color: #ffeeaa;
             padding: 20px;
+            min-height: calc(100vh - 40px);
         }
         .logo {
             grid-area: l;
             background: #92cab3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .nav {
+        nav {
             grid-area: n;
             background: #ff706a;
             display: flex;
-            justify-content: space-between;
+            align-items: center;
         }
-        .nav > span {
+        nav > span:not(:last-child) {
             margin: 0 20px;
         }
-        .nav > span:last-child {
-            margin-left: auto;
+        nav > span:last-child {
+            margin: 0 20px 0 auto;
         }
-        .aside {
+        aside {
             grid-area: a;
             background: #00ca97;
             display: flex;
             flex-direction: column;
         }
-        .aside > span:first-child {
+        aside > span:first-child {
             margin-bottom: auto;
         }
-        .footer {
+        footer {
             grid-area: f;
             background: #dc9cdd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .main {
+        main {
             grid-area: m;
             background: #fbca5a;
             display: grid;
@@ -59,7 +69,6 @@
         }
         .main-c-1, .main-c-2, .main-c-3, .main-c-4 {
             display: flex;
-            height: 320px;
             align-items: center;
             justify-content: center;
         }
@@ -78,7 +87,6 @@
         .main-c-4 {
             grid-area: c4;
             background: #aaa097;
-            height: unset;
         }
 
         .t-center {
@@ -86,58 +94,60 @@
         }
 
         @media only screen and (max-width: 1024px) {
-            .main {
+            main {
                 grid-template-areas: 'c1 c1 c1 c1 c2 c2 c2 c2 c2 c2 c2 c2' 'c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3' 'c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4';
-            }
-            .main-c-1, .main-c-2, .main-c-3, .main-c-4 {
-                height: 200px;
             }
         }
         @media only screen and (max-width: 767px) {
             .grid-container {
                 grid-template-areas: 'l l l l l l l l l l l l' 'n n n n n n n n n n n n' 'm m m m m m m m m m m m' 'a a a a a a a a a a a a' 'f f f f f f f f f f f f';
                 padding: 10px;
+                grid-template-rows: 60px 60px auto 155px 60px;
+                grid-template-columns: auto;
             }
-            .main {
+            main {
                 padding: 15px;
             }
         }
         @media only screen and (max-width: 575px) {
-            .main {
+            .grid-container {
+                grid-template-rows: 60px 60px auto 137px 60px;
+            }
+            main {
                 grid-template-areas: 'c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1' 'c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2' 'c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3' 'c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4';
                 padding: 10px;
             }
-            .main-c-1, .main-c-2, .main-c-3, .main-c-4 {
-                height: 100px;
-            }
-            .nav > span {
+            nav > span:not(:last-child) {
                 margin: 0 5px;
+            }
+            nav > span:last-child {
+                margin: 0 5px 0 auto;
             }
         }
     </style>
 </head>
 <body>
-<div class="grid-container">
-    <div class="logo t-center">LOGO</div>
-    <div class="nav">
-        <span>HOME</span>
-        <span>ABOUT</span>
-        <span>GALLERY</span>
-        <span>LOG IN</span>
+    <div class="grid-container">
+        <div class="logo">LOGO</div>
+        <nav>
+            <span>HOME</span>
+            <span>ABOUT</span>
+            <span>GALLERY</span>
+            <span>LOG IN</span>
+        </nav>
+        <aside class="t-center">
+            <span>MENU</span>
+            <span>Articles</span>
+            <span>News</span>
+            <span>Blog</span>
+        </aside>
+        <main>
+            <div class="main-c-1 t-center">CONTENT 1</div>
+            <div class="main-c-2 t-center">CONTENT 2</div>
+            <div class="main-c-3 t-center">CONTENT 3</div>
+            <div class="main-c-4 t-center">CONTENT 4</div>
+        </main>
+        <footer>FOOTER</footer>
     </div>
-    <div class="aside t-center">
-        <span>MENU</span>
-        <span>Articles</span>
-        <span>News</span>
-        <span>Blog</span>
-    </div>
-    <div class="main">
-        <div class="main-c-1 t-center">CONTENT 1</div>
-        <div class="main-c-2 t-center">CONTENT 2</div>
-        <div class="main-c-3 t-center">CONTENT 3</div>
-        <div class="main-c-4 t-center">CONTENT 4</div>
-    </div>
-    <div class="footer t-center">FOOTER</div>
-</div>
 </body>
 </html>
