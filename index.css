@@ -2,135 +2,112 @@ html,body {
     background-color: #ffeead;
   }
   
-      .wrapper {
-          display: grid;
-          grid-gap: 5px;
-          grid-template-columns: repeat(12, [col] 1fr) ;
-          /* grid-template-rows: repeat(6, [row] auto ); */
-          grid-template-rows: auto 150px 150px 150px 150px auto;
-          background-color: #ffeead;
-          color: #444;
-      }
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(12, [col] 1fr) ;
+    /* grid-template-rows: repeat(6, [row] auto ); */
+    grid-template-rows: auto 150px 150px 150px 150px auto;
+    padding: 10px;
+    background-color: #ffeead;
+    color: #444;
+}
   
-      .box {
-          padding: 10px;
-          font-size: 150%;
-      }
+.box {
+    padding: 10px;
+    font-size: 150%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul:last-child {
+  margin-left: auto;
+}
+
+nav li {
+  list-style: none;
+}
+
+.topbar > li {
+  padding: 0 10px 0 10px;
+  color: #f7e6d7;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+.leftbar {
+  display: flex; 
+  flex-direction: column;
+}
+
+ul:first-child {
+  margin-bottom: auto;
+} 
+
+.logo {
+    text-align: center;
+    background-color: #ffcc5c;
+    grid-column: 1 / 2;
+}
   
-      .box .box {
-          font-size: 1em;
-      }
-
-      ul {
-        display: block;
-        list-style-type: none;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 0;
-     }
-
-      nav {
-          flex: 1;
-          display: inline;
-      }
-
-      nav ul {
-          display: flex;
-      }
-
-      nav li {
-        list-style: none;
-      }
-
-      .gallery {
-          flex: 1;
-      }
-
-      .header > li {
-        padding: 0 10px 0 10px;
-        font-size: 1em;
-        color: #f7e6d7;
-        box-sizing: border-box;
-        list-style-type: none;
-      }
-
-      .aside-bottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 95%; 
-        align-items: center;   
-      }
-
-      .aside-bottom > div {
-        padding: 10px;
-      }
-
+.topbar {
+    background-color: #8dcfb1;
+    grid-column: col 2/ -1;
+}
   
-      .a {
-          text-align: center;
-          background-color: #ffcc5c;
-          grid-column: col / span 2;
-      }
+.leftbar {
+    text-align: center;
+    background-color: #ff6f69;
+    grid-column: 1 / 2;
+    grid-row: 2 / 6;
+}
   
-      .b {
-          background-color: #8dcfb1;
-          grid-column: col 3 / -1;
-      }
-  
-      .c {
-          text-align: center;
-          background-color: #ff6f69;
-          grid-column: col / span 2;
-          grid-row: 2 / 6;
-      }
-  
-      .d{
-          background-color: rgb(255, 182, 86);
-          grid-column: col 3 / -1;
-          grid-row: 2 / 6;
-          display: grid;
-          grid-gap: 10px;
-          padding: 20px;
-          justify-content: center;
-          align-content: center;
-          grid-template-columns: 1fr 3fr 2fr;
-          grid-template-rows: 1fr 1fr 1fr 1fr;
-      }
+.content{
+    background-color: rgb(255, 182, 86);
+    grid-column: col 3 / -1;
+    grid-row: 2 / 6;
+    display: grid;
+    grid-gap: 10px;
+    padding: 20px;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
 
-      .d > div {
+      .content > div {
         display: flex;
         align-items: center;
         justify-content: center;
       }
   
-      .e {
+      .first-content {
           background-color: #e67b90;
           grid-column: 1 / 1;
           grid-row: 1 / 3;
       }
   
-      .f {
+      .second-content {
           background-color: #ae7ece;
           grid-column: 2 / 2;
           grid-row: 1 / 3;
       }
   
-      .g {
+      .third-content {
           background-color: #9dcf90;
           grid-column: 3 / 3;
           grid-row: 1 / 5;
       }
 
-      .h {
+      .forth-content {
         background-color: #8fdbdb;
           grid-column: 1 / 3;
           grid-row: 3 / 5; 
       }
 
-      .j {
+      .bottom {
           text-align: center;
         background-color: #a9e069;
         grid-column: col 1 / -1;
@@ -178,7 +155,7 @@ html,body {
 
       }
 
-      @media all and (max-width: 615px) {
+      /* @media all and (max-width: 615px) {
         .header {
           flex-wrap: wrap;
         }
@@ -218,7 +195,7 @@ html,body {
             grid-row: 4 / 4; 
         }
 
-      }
+      } */
 
       
 
