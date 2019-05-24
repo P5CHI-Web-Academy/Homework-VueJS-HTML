@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Homework</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            color: #ffeeaa;
+            font-weight: 700;
+            line-height: 2;
+            font-size: calc(14px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'l l n n n n n n n n n n' 'a a m m m m m m m m m m' 'f f f f f f f f f f f f';
+            grid-template-columns: 205px auto;
+            grid-template-rows: 60px auto 60px;
+            grid-gap: 5px;
+            background-color: #ffeeaa;
+            padding: 20px;
+            box-sizing: border-box;
+            min-height: 100vh;
+        }
+        .logo {
+            grid-area: l;
+            background: #92cab3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav {
+            grid-area: n;
+            background: #ff706a;
+            display: flex;
+            align-items: center;
+        }
+        nav > span:not(:last-child) {
+            margin: 0 20px;
+        }
+        nav > span:last-child {
+            margin: 0 20px 0 auto;
+        }
+        aside {
+            grid-area: a;
+            background: #00ca97;
+            display: flex;
+            flex-direction: column;
+        }
+        aside > span:first-child {
+            margin-bottom: auto;
+        }
+        footer {
+            grid-area: f;
+            background: #dc9cdd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            grid-area: m;
+            background: #fbca5a;
+            display: grid;
+            grid-template-areas: 'c1 c1 c1 c2 c2 c2 c2 c2 c4 c4 c4 c4' 'c3 c3 c3 c3 c3 c3 c3 c3 c4 c4 c4 c4';
+            grid-gap: 5px;
+            padding: 30px;
+        }
+        .main-c-1, .main-c-2, .main-c-3, .main-c-4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-c-1 {
+            grid-area: c1;
+            background: #d3cad3;
+        }
+        .main-c-2 {
+            grid-area: c2;
+            background: #e9a1a5;
+        }
+        .main-c-3 {
+            grid-area: c3;
+            background: #bccabc;
+        }
+        .main-c-4 {
+            grid-area: c4;
+            background: #aaa097;
+        }
+
+        .t-center {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            main {
+                grid-template-areas: 'c1 c1 c1 c1 c2 c2 c2 c2 c2 c2 c2 c2' 'c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3' 'c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4';
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .grid-container {
+                grid-template-areas: 'l l l l l l l l l l l l' 'n n n n n n n n n n n n' 'm m m m m m m m m m m m' 'a a a a a a a a a a a a' 'f f f f f f f f f f f f';
+                padding: 10px;
+                grid-template-rows: 60px 60px auto 155px 60px;
+                grid-template-columns: auto;
+            }
+            main {
+                padding: 15px;
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            .grid-container {
+                grid-template-rows: 60px 60px auto 137px 60px;
+            }
+            main {
+                grid-template-areas: 'c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1 c1' 'c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2 c2' 'c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3 c3' 'c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4 c4';
+                padding: 10px;
+            }
+            nav > span:not(:last-child) {
+                margin: 0 5px;
+            }
+            nav > span:last-child {
+                margin: 0 5px 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="logo">LOGO</div>
+        <nav>
+            <span>HOME</span>
+            <span>ABOUT</span>
+            <span>GALLERY</span>
+            <span>LOG IN</span>
+        </nav>
+        <aside class="t-center">
+            <span>MENU</span>
+            <span>Articles</span>
+            <span>News</span>
+            <span>Blog</span>
+        </aside>
+        <main>
+            <div class="main-c-1 t-center">CONTENT 1</div>
+            <div class="main-c-2 t-center">CONTENT 2</div>
+            <div class="main-c-3 t-center">CONTENT 3</div>
+            <div class="main-c-4 t-center">CONTENT 4</div>
+        </main>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+</html>
